@@ -33,7 +33,7 @@ function searchCondition() {
         }
         
     
-        if (searchText.includes("temple")) {
+        if (input.includes("temple")) {
             jsonData.temples.forEach(temple => {
                 resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
                 resultDiv.innerHTML += `<img src="${temple.imageURL}" alt="hjh">`;
@@ -41,7 +41,7 @@ function searchCondition() {
             });
         }
     
-        if (searchText.includes("beach")) {
+        if (input.includes("beach")) {
             jsonData.beaches.forEach(beach => {
                 resultDiv.innerHTML += `<h2>${beach.name}</h2>`;
                 resultDiv.innerHTML += `<img src="${beach.imageURL}" alt="hjh">`;
