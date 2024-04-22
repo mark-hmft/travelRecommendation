@@ -1,3 +1,6 @@
+const btnSearch = document.getElementById('btnSearch');
+btnSearch.addEventListener('click', searchCondition);
+
 function searchCondition() {
     
     const resultDiv = document.getElementById('result');
@@ -12,7 +15,7 @@ function searchCondition() {
         resultDiv.innerHTML = 'An error occurred while fetching data.';
       });
   }
-    btnSearch.addEventListener('click', searchCondition);
+    
 
     function searchAndDisplayResults(inputText) {
         // Assume the fetched JSON data is stored in a variable called 'jsonData'
@@ -27,7 +30,7 @@ function searchCondition() {
             jsonData.countries.forEach(country => {
                 country.cities.forEach(city => {
                 resultDiv.innerHTML += `<h2>${city.name}</h2>`;
-                resultDiv.innerHTML += `<img src="./${city.imageUrl}" alt="hjh">`;
+                resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="hjh">`;
                 resultDiv.innerHTML += `<p>${city.description}</p>`;
                 });
             });
@@ -39,8 +42,8 @@ function searchCondition() {
             jsonData.temples.forEach(temple => {
                 console.log(`<h2>${temple.name}</h2>`);
                 resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
-                console.log(`<img src="./${temple.imageUrl}" alt="hjh">`);
-                resultDiv.innerHTML += `<img src="./${temple.imageUrl}" alt="hjh">`;
+                console.log(`<img src=".${temple.imageUrl}" alt="hjh">`);
+                resultDiv.innerHTML += `<img src="${temple.imageUrl}" alt="hjh">`;
                 console.log(`<p>${temple.description}</p>`);
                 resultDiv.innerHTML += `<p>${temple.description}</p>`;
             });
