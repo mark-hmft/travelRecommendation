@@ -86,7 +86,6 @@ nav {
     word-wrap: break-word;
   }
 #result{
-  height: 400px;
   width: 500px;
   display: flex;
   align-items: center;

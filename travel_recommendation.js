@@ -25,7 +25,7 @@ function searchCondition() {
         
         
         // Check if the search text contains keywords
-        if (input.includes("country")) {
+        if (input.includes("country") || input.includes("countries")) {
             console.log("country");
             resultDiv.innerHTML = '';
             jsonData.countries.forEach(country => {
@@ -38,7 +38,7 @@ function searchCondition() {
                 resultDiv.innerHTML += `<p>${city.description}</p>`;
                 });
             });
-        } else if (input.includes("temple")) {
+        } else if (input.includes("temple") || input.includes("temples")) {
             console.log("temple");
             resultDiv.innerHTML = '';
             jsonData.temples.forEach(temple => {
@@ -49,7 +49,7 @@ function searchCondition() {
                 console.log(`<p>${temple.description}</p>`);
                 resultDiv.innerHTML += `<p>${temple.description}</p>`;
             });
-        } else if (input.includes("beach")) {
+        } else if (input.includes("beach") || input.includes("beaches")) {
             console.log("beach");
             resultDiv.innerHTML = '';
             jsonData.beaches.forEach(beach => {
