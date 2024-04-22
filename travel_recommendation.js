@@ -1,7 +1,10 @@
 const btnSearch = document.getElementById('btnSearch');
-btnSearch.addEventListener('click', searchCondition);
+btnSearch.addEventListener('click', searchDestination);
 
-function searchCondition() {
+const btnClear = document.getElementById('btnClear');
+btnClear.addEventListener('click', clearSearch);
+
+function searchDestination() {
     
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
@@ -63,4 +66,12 @@ function searchCondition() {
             resultDiv.innerHTML = 'Sorry no results found.';
         }
     
+   }
+
+   function clearSearch(){
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+    const input = document.getElementById('searchInput');
+    input.value = '';
+
    }
