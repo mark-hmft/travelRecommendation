@@ -20,9 +20,7 @@ function searchCondition() {
         const input = document.getElementById('searchInput').value.toLowerCase();
         const resultDiv = document.getElementById('result');
         resultDiv.innerHTML = '';
-        // Initialize an empty result string
-        let result = "";
-    
+        
         // Check if the search text contains keywords
         if (input.includes("country")) {
             jsonData.countries.forEach(country => {
@@ -37,18 +35,20 @@ function searchCondition() {
     
         if (searchText.includes("temple")) {
             jsonData.temples.forEach(temple => {
-                resultDiv.innerHTML += `<h2>${country.name}</h2>`;
-                resultDiv.innerHTML += `<img src="${country.imageURL}" alt="hjh">`;
-                resultDiv.innerHTML += `<p>${country.description}</p>`;
+                resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
+                resultDiv.innerHTML += `<img src="${temple.imageURL}" alt="hjh">`;
+                resultDiv.innerHTML += `<p>${temple.description}</p>`;
             });
         }
     
         if (searchText.includes("beach")) {
             jsonData.beaches.forEach(beach => {
-                resultDiv.innerHTML += `<h2>${country.name}</h2>`;
-                resultDiv.innerHTML += `<img src="${country.imageURL}" alt="hjh">`;
-                resultDiv.innerHTML += `<p>${country.description}</p>`;
+                resultDiv.innerHTML += `<h2>${beach.name}</h2>`;
+                resultDiv.innerHTML += `<img src="${beach.imageURL}" alt="hjh">`;
+                resultDiv.innerHTML += `<p>${beach.description}</p>`;
             });
+        } else {
+            resultDiv.innerHTML = 'Sorry no results found.';
         }
     
    }
