@@ -29,31 +29,29 @@ function searchCondition() {
             console.log("country");
             jsonData.countries.forEach(country => {
                 country.cities.forEach(city => {
+                console.log(`<h2>${city.name}</h2>`);
                 resultDiv.innerHTML += `<h2>${city.name}</h2>`;
-                resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="hjh">`;
+                console.log(`<img src="./${city.imageUrl}" alt="hjh">`);
+                resultDiv.innerHTML += `<img src="./${city.imageUrl}" alt="hjh">`;
+                console.log(`<p>${city.description}</p>`);
                 resultDiv.innerHTML += `<p>${city.description}</p>`;
                 });
             });
-        }
-        
-    
-        if (input.includes("temple")) {
+        } else if (input.includes("temple")) {
             console.log("temple");
             jsonData.temples.forEach(temple => {
                 console.log(`<h2>${temple.name}</h2>`);
                 resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
-                console.log(`<img src=".${temple.imageUrl}" alt="hjh">`);
-                resultDiv.innerHTML += `<img src="${temple.imageUrl}" alt="hjh">`;
+                console.log(`<img src="./${temple.imageUrl}" alt="hjh">`);
+                resultDiv.innerHTML += `<img src="./${temple.imageUrl}" alt="hjh">`;
                 console.log(`<p>${temple.description}</p>`);
                 resultDiv.innerHTML += `<p>${temple.description}</p>`;
             });
-        }
-    
-        if (input.includes("beach")) {
+        } else if (input.includes("beach")) {
             console.log("beach");
             jsonData.beaches.forEach(beach => {
                 resultDiv.innerHTML += `<h2>${beach.name}</h2>`;
-                console.log(`<img src="${beach.imageUrl}" alt="hjh">`);
+                console.log(`<img src="./${beach.imageUrl}" alt="hjh">`);
                 resultDiv.innerHTML += `<img src="./${beach.imageUrl}" alt="hjh">`;
                 resultDiv.innerHTML += `<p>${beach.description}</p>`;
             });
