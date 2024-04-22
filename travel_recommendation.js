@@ -22,11 +22,12 @@ function searchCondition() {
         const jsonData = inputText;
         const input = document.getElementById('searchInput').value.toLowerCase();
         const resultDiv = document.getElementById('result');
-        resultDiv.innerHTML = '';
+        
         
         // Check if the search text contains keywords
         if (input.includes("country")) {
             console.log("country");
+            resultDiv.innerHTML = '';
             jsonData.countries.forEach(country => {
                 country.cities.forEach(city => {
                 console.log(`<h2>${city.name}</h2>`);
@@ -39,6 +40,7 @@ function searchCondition() {
             });
         } else if (input.includes("temple")) {
             console.log("temple");
+            resultDiv.innerHTML = '';
             jsonData.temples.forEach(temple => {
                 console.log(`<h2>${temple.name}</h2>`);
                 resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
@@ -49,6 +51,7 @@ function searchCondition() {
             });
         } else if (input.includes("beach")) {
             console.log("beach");
+            resultDiv.innerHTML = '';
             jsonData.beaches.forEach(beach => {
                 resultDiv.innerHTML += `<h2>${beach.name}</h2>`;
                 console.log(`<img src="./${beach.imageUrl}" alt="hjh">`);
@@ -56,6 +59,7 @@ function searchCondition() {
                 resultDiv.innerHTML += `<p>${beach.description}</p>`;
             });
         } else {
+            resultDiv.innerHTML = '';
             resultDiv.innerHTML = 'Sorry no results found.';
         }
     
