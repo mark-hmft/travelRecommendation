@@ -26,7 +26,7 @@ function searchCondition() {
             jsonData.countries.forEach(country => {
                 country.cities.forEach(city => {
                 resultDiv.innerHTML += `<h2>${city.name}</h2>`;
-                resultDiv.innerHTML += `<img src="${city.imageURL}" alt="hjh">`;
+                resultDiv.innerHTML += `<img src="./${city.imageURL}" alt="hjh">`;
                 resultDiv.innerHTML += `<p>${city.description}</p>`;
                 });
             });
@@ -36,7 +36,7 @@ function searchCondition() {
         if (input.includes("temple")) {
             jsonData.temples.forEach(temple => {
                 resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
-                resultDiv.innerHTML += `<img src="${temple.imageURL}" alt="hjh">`;
+                resultDiv.innerHTML += `<img src="./${temple.imageURL}" alt="hjh">`;
                 resultDiv.innerHTML += `<p>${temple.description}</p>`;
             });
         }
@@ -44,7 +44,7 @@ function searchCondition() {
         if (input.includes("beach")) {
             jsonData.beaches.forEach(beach => {
                 resultDiv.innerHTML += `<h2>${beach.name}</h2>`;
-                resultDiv.innerHTML += `<img src="${beach.imageURL}" alt="hjh">`;
+                resultDiv.innerHTML += `<img src="./${beach.imageURL}" alt="hjh">`;
                 resultDiv.innerHTML += `<p>${beach.description}</p>`;
             });
         } else {
