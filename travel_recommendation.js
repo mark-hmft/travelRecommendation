@@ -37,8 +37,11 @@ function searchCondition() {
         if (input.includes("temple")) {
             console.log("temple");
             jsonData.temples.forEach(temple => {
+                console.log(`<h2>${temple.name}</h2>`);
                 resultDiv.innerHTML += `<h2>${temple.name}</h2>`;
+                console.log(`<img src="./${temple.imageUrl}" alt="hjh">`);
                 resultDiv.innerHTML += `<img src="./${temple.imageUrl}" alt="hjh">`;
+                console.log(`<p>${temple.description}</p>`);
                 resultDiv.innerHTML += `<p>${temple.description}</p>`;
             });
         }
